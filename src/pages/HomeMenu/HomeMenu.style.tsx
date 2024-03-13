@@ -8,6 +8,7 @@ const Images = [
 ];
 
 export const HomeMenuBody = styled.div`
+  background-color: black;
   font-family: "Raleway", sans-serif;
   line-height: 1.5em;
   margin: 0;
@@ -67,6 +68,9 @@ export const Content = styled.div`
   width: 100%;
   opacity: 0; /* 초기에는 안 보이도록 설정 */
   transition: opacity 0.5s;
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 
   ${GalleryItem}:hover & {
     bottom: 0;

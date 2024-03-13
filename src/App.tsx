@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeMenu from "./pages/HomeMenu/HomeMenu";
-import MainPage from "./pages/MainPage/MainPage";
+import MainPage from "./pages/Nav/Nav";
 
 function App() {
   return (
