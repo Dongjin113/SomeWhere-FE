@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import * as COLOR from "../../constants/color";
+import * as FONT from "../../constants/font";
 import { FaSearch } from "react-icons/fa";
 
 export const Nav = styled.nav`
@@ -6,10 +8,11 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: gray;
+  background-color: ${COLOR.Brown1};
   min-height: 95px;
   opacity: 0.9;
-  color: white;
+  font-size: ${FONT.L};
+  color: ${COLOR.White};
 `;
 
 export const Menu = styled.ul`
@@ -20,7 +23,6 @@ export const Menu = styled.ul`
 
 export const Item = styled.li`
   margin-right: 3rem;
-  font-size: 18px;
   text-align: center;
   white-space: nowrap;
 
@@ -32,7 +34,7 @@ export const Item = styled.li`
 
 export const Logo = styled.div`
   padding-left: 5%;
-  margin-right: 2rem;
+  margin-right: 10%;
 
   img {
     <index:!></index:!>
@@ -58,8 +60,11 @@ export const RightMenu = styled.div`
 export const SignIn = styled.div`
   padding-right: 2rem;
   white-space: nowrap;
+`;
 
-  font-size: 18px;
+export const SignOut = styled.div`
+  padding-right: 2rem;
+  white-space: nowrap;
 `;
 
 export const SignUp = styled.div`

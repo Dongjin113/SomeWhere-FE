@@ -10,9 +10,10 @@ import {
   SearchIcon,
   RightMenu,
   SearchInput,
+  SignOut,
 } from "./Nav.style";
 
-function MainPage() {
+function NavBar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
@@ -37,11 +38,11 @@ function MainPage() {
         </Searchbox>
 
         <SignIn>로그인</SignIn>
-        <SignIn>로그인</SignIn>
+        <SignOut>로그아웃</SignOut>
         <SignUp>회원가입</SignUp>
       </RightMenu>
     </Nav>
   );
 }
 
-export default MainPage;
+export default NavBar;

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import * as COLOR from "../../constants/color";
+import * as FONT from "../../constants/font";
 
 const Images = [
   "/images/camping-image.jpg",
@@ -8,7 +10,7 @@ const Images = [
 ];
 
 export const HomeMenuBody = styled.div`
-  background-color: black;
+  background-color: ${COLOR.Black};
   font-family: "Raleway", sans-serif;
   line-height: 1.5em;
   margin: 0;
@@ -56,8 +58,8 @@ export const GalleryItem = styled.li`
 `;
 
 export const Content = styled.div`
-  background-color: #000;
-  color: #fff;
+  background-color: ${COLOR.Black};
+  color: ${COLOR.White};
   text-align: center;
   height: 250px;
   bottom: -320px;
@@ -69,8 +71,7 @@ export const Content = styled.div`
   opacity: 0; /* 초기에는 안 보이도록 설정 */
   transition: opacity 0.5s;
   font-family: "Jua", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-weight: ${FONT.Regular};
 
   ${GalleryItem}:hover & {
     bottom: 0;
