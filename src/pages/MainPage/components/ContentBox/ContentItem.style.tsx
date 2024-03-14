@@ -5,9 +5,9 @@ import { FaStar } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 
 export const ContentImage = styled.div`
-  position: relative; /* 자식 요소를 위한 기준 위치 */
-  width: 175px;
-  height: 175px;
+  position: relative;
+  width: 250px;
+  height: 250px;
   border-radius: 5%;
 
   img {
@@ -23,7 +23,7 @@ export const ContentImage = styled.div`
 `;
 
 export const ContentIt = styled.li`
-  padding-right: 10px;
+  padding-right: 12px;
   list-style-type: none;
 `;
 
@@ -49,16 +49,16 @@ export const IntroduceCover = styled.div`
 `;
 
 export const CoverTitle = styled.div`
-  padding-top: 5%;
+  padding-top: 10%;
 
-  font-size: ${FONT.M};
+  font-size: ${FONT.L};
 `;
 
 export const CoverSubtitle = styled.div`
   display: flex;
-  font-size: ${FONT.S};
-  div {
-  }
+  font-size: ${FONT.M};
+  padding-top: 3%;
+  padding-bottom: 3%;
 `;
 
 export const Area = styled.div`
@@ -79,7 +79,7 @@ export const CoverMidline = styled.span`
 
 export const CoverIntroduce = styled.div`
   padding-top: 5%;
-  font-size: ${FONT.XS};
+  font-size: ${FONT.M};
   line-height: 1.5;
 `;
 
@@ -91,7 +91,7 @@ export const CoverContents = styled.div`
 export const CoverFooter = styled.div`
   display: flex;
   align-items: center;
-  font-size: ${FONT.XXS};
+  font-size: ${FONT.S};
   padding-top: 10%;
   height: 30px;
 `;
@@ -123,7 +123,7 @@ export const Likes = styled.div`
 `;
 
 export const ContentName = styled.div`
-  margin-top: 5px;
+  margin-top: 7%;
 `;
 
 export const StarCover = styled.div`

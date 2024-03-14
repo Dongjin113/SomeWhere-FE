@@ -82,8 +82,9 @@ export const SearchInput = styled.input`
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 50px;
+  height: 40px;
   outline: none;
-  width: ${({ isOpen }) => (isOpen ? "200px" : "0")};
+  width: ${({ isOpen }) => (isOpen ? "350px" : "0")};
   opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
-  transition: width 0.3s ease, opacity 0.3s ease;
+  transition: width 0.7s ease, opacity 0.7s ease;
 `;

@@ -20,7 +20,9 @@ import {
   Stars,
 } from "./ContentItem.style";
 
-function ContentItem() {
+function ContentItem(props: { index: number }) {
+  const { index } = props;
+
   const truncateCoverIntroduce = (text: string) => {
     if (text.length <= 24) return text;
     return text.substring(0, 24) + "...";
@@ -61,7 +63,7 @@ function ContentItem() {
           </CoverContents>
         </IntroduceCover>
       </ContentImage>
-      <ContentName>컨텐츠이름</ContentName>
+      <ContentName>{"컨텐츠이름" + index}</ContentName>
     </ContentIt>
   );
 }
