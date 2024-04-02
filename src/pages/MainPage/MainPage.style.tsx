@@ -20,4 +20,10 @@ export const ContentBoxContainer = styled.div`
 
 export const MapContainer = styled.div`
   padding-top: ${({ isMenuFixed }) => (isMenuFixed ? "300px" : "20px")};
+
+  z-index: -2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
 `;

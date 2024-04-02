@@ -13,11 +13,23 @@ import {
   PreIcon,
   SlideButton,
 } from "./ContentBox.style";
+import { campingPreview } from "../../api/constants/camping";
 
-function ContentBox() {
+interface ContentProps {
+  region: string;
+  category: string;
+  campingData: campingPreview[];
+}
+
+function ContentBox({
+  region,
+  category,
+  campingData,
+  detailInfoHandler,
+}: ContentProps) {
   const [startIdx, setStartIdx] = useState(0);
   const itemsPerPage = 4;
-  const contentCounts = 15;
+  const contentCounts = campingData.length;
 
   const handleNextButtonClick = () => {
     const maxPage = Math.ceil(contentCounts / itemsPerPage);
@@ -43,14 +55,24 @@ function ContentBox() {
       </SlideButton>
       <Content>
         <ContentNav>
-          #서울
+          <div>
+            <span style={{ fontSize: "1.1em" }}> #{region}</span>
+            <span style={{ fontSize: "0.9em" }}> [{category}</span>
+            <span style={{ fontSize: "0.8em" }}> ({campingData.length})</span>
+            <span style={{ fontSize: "0.9em" }}>]</span>
+          </div>
           <ContentDetail>보러가기</ContentDetail>
         </ContentNav>
         <ContentMidline />
         <ContentContainer>
           <ContentItems start={startIdx}>
-            {Array.from({ length: contentCounts }).map((_, index) => (
-              <ContentItem key={index} index={index} />
+            {campingData.map((camp, index) => (
+              <ContentItem
+                key={camp.campingId}
+                index={camp.campingId}
+                campingData={camp}
+                detailInfoHandler={detailInfoHandler}
+              />
             ))}
           </ContentItems>
         </ContentContainer>
