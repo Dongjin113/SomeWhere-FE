@@ -2,9 +2,7 @@ import styled from "styled-components";
 import * as COLOR from "../../constants/color";
 import * as FONT from "../../constants/font";
 
-export const MainPageContainer = styled.div`
-  justify-content: space-between;
-`;
+export const MainPageContainer = styled.div``;
 
 export const ContentBoxContainer = styled.div`
   padding-top: "20px";

@@ -8,7 +8,7 @@ import {
 } from "./MainPage.style";
 import Footer from "../Footer/Footer";
 import SelectTag from "../../components/SelectTag/SelectTag";
-import MainPageMap from "../../components/Map/MainPageMap";
+import MainPageMap from "../../components/MainPageMap/MainPageMap";
 import useMainPageAPI from "../../api/camping/useMainPageAPI";
 import { campingPreview } from "../../api/constants/camping";
 import { useRecoilState } from "recoil";
@@ -30,47 +30,28 @@ function MainPage() {
   };
 
   const city = [
-    // "서울특별시",
-    // "경기도",
-    // "강원도",
-    // "전라남도",
-    // "전라북도",
-    // "경상남도",
-    // "경상북도",
-    // "충청남도",
-    // "충청북도",
-    // "광주",
-    // "대구",
-    // "대전",
-    // "부산",
-    // "울산",
-    // "세종",
-    // "인천",
-    // "제주",
-
-    "전라북도",
-    "경상북도",
-    "전라남도",
-    "경상남도",
+    "서울",
     "경기도",
     "강원도",
-    "제주특별자치도",
+    "전라남도",
+    "전라북도",
+    "경상남도",
+    "경상북도",
     "충청남도",
     "충청북도",
-    "대구광역시",
-    "서울특별시",
-    "인천광역시",
-    "광주광역시",
-    "대전광역시",
-    "세종특별자치시",
-    "울산광역시",
-    "부산광역시",
+    "광주",
+    "대구",
+    "대전",
+    "부산",
+    "울산",
+    "세종시",
+    "인천",
+    "제주도",
   ];
 
   const handleRegionCamping = (region) => {
     setRegion(region);
     requestPreviewCamping(region, setRegionCampings);
-    console.log(regionCampings);
   };
 
   useEffect(() => {
@@ -81,7 +62,7 @@ function MainPage() {
   }, []);
 
   useEffect(() => {
-    handleRegionCamping("서울특별시");
+    handleRegionCamping("서울");
   }, []);
 
   const handleScroll = () => {
@@ -109,11 +90,13 @@ function MainPage() {
         requestRegionCamping={handleRegionCamping}
       />
       <MapContainer isMenuFixed={isMenuFixed}>
-        {regionCampings && (
+        {regionCampings ? (
           <MainPageMap
             campingData={regionCampings}
             detailInfoHandler={detailInfoHandler}
           />
+        ) : (
+          <div>캠핑장 정보를 불러오지 못했습니다</div>
         )}
       </MapContainer>
       <ContentBoxContainer isMenuFixed={isMenuFixed}>
