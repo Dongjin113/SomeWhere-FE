@@ -14,6 +14,7 @@ import {
   SlideButton,
 } from "./ContentBox.style";
 import { campingPreview } from "../../api/constants/camping";
+import { useCampingDetailNavigation } from "../../constants/urlNavigator";
 
 interface ContentProps {
   region: string;
@@ -61,12 +62,14 @@ function ContentBox({
             <span style={{ fontSize: "0.8em" }}> ({campingData.length})</span>
             <span style={{ fontSize: "0.9em" }}>]</span>
           </div>
-          <ContentDetail>보러가기</ContentDetail>
+          <ContentDetail onClick={useCampingDetailNavigation()}>
+            보러가기
+          </ContentDetail>
         </ContentNav>
         <ContentMidline />
         <ContentContainer>
           <ContentItems start={startIdx}>
-            {campingData.map((camp, index) => (
+            {campingData.map((camp) => (
               <ContentItem
                 key={camp.campingId}
                 index={camp.campingId}
