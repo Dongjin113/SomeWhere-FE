@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeMenu from "./pages/HomeMenu/HomeMenu";
 import MainPage from "./pages/MainPage/MainPage";
 import { RecoilRoot } from "recoil";
+import CampingDetail from "./pages/CampingDetail/CampingDetailMap";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/travel" element={<HomeMenu />} />
             <Route path="/camping" element={<MainPage />} />
             <Route path="/cafe" element={<HomeMenu />} />
+            <Route path="/camping/details" element={<CampingDetail />} />
           </Routes>
         </div>
       </RecoilRoot>
